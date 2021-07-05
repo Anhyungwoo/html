@@ -1,35 +1,87 @@
 <!doctipe html>
 <html>
- <head>
-   <meta charset='utf-8'>
- </head>
- <body>
-   <form method='GET' action='http://yonggyo.com/~webclass'>
-      문장:<input type='text'name='text'value='기본문장'><br>
-	  단일선택:<input type='radio'name='radio'checked><br>
-	  다중선택:<input type='checkbox'name='checkbox'checked><br>
-	  비밀번호:<input type='password'name='password'value='123456'><br>
-	  이메일:<input type='email'name='email'value='yonggyo00@naver.com'><br>
-	  숫자:<input type='number'name='number'value='10000'><br>
-	  범위:<input type='range'min='10'max='30'name='range'><br>
-	  색상:<input type='color'name='color'><br>
-	  날자:<input type='date'name='date'><br>
-	  문장 여러줄 입력<br>
-	  <textarea name='textarea'></textarea><br>
-	  다중선택(콤보박스)
-	  <select>
-	     <option value="선택1">선택1</option>
-	     <option value="선택1"selected>선택2</option>
-	     <option value="선택1">선택3</option>
-	  </select>
-	  <br>
-	  <input type='text'list="flower"name='flower'value='장미'>
-	  <datalist id="flower">
-	      <option value='장미'>
-		  <option value='튤립'>
-		  <option value='코스모스'>
-	  </datalist>
-	  <input type='submit'>
-   </form>
- </body>
-/<html>
+  <head>
+     <meta charset='utf-8'>
+     <title>회원 가입</title>	 
+  </head>
+  <body>
+     <!--
+	 1.회원명
+	 2.아이디
+	 3.비밀번호+비밀번호 확인
+	 4.이메일
+	 5.휴대폰번호
+	 6.취미
+	 7.생년월일
+	 8.자기소개
+	 -->
+	 <img src='Maple_A_200603_054824.JPG'width='800'height='500'>
+	 <form method='POST'action='/join'>
+	  <dl>
+	    <dt>회원명</dt>
+		<dd>
+		  <input type='text'width='800' name='memNm'>
+		</dd>
+	  </dl>
+	  <dl>
+	    <dt>아이디</dt>
+		<dd>
+		  <input type='text' name='memid'>
+		</dd>
+	  </dl>
+	  <dl>
+	    <dt>비밀번호</dt>
+		<dd>
+		  <input type='password' name='memPw'>
+		</dd>	
+	  </dl>
+	  <dl>
+	    <dt>비밀번호 확인</dt>
+		<dd>
+		  <input type='password' name='memPwRe'>
+		</dd>
+	  </dl>
+	  <dl>
+	    <dt>이메일</dt>
+		<dd>
+		  <input type='email' name='email'>
+		</dd>
+	  </dl>
+	  <dl>
+	    <dt>휴대폰번호</dt>
+		<dd>
+		  <input type='text' name='cellPhone'>
+		</dd>
+	  </dl>
+	  <dl>
+	    <dt>취미</dt>
+		<dd>
+		  <input type='checkbox' name='hobby' value='낚시'>
+		  낚시
+		  <input type='checkbox' name='hobby' value='수영'>
+		  수영
+		  <input type='checkbox' name='hobby' value='축구'>
+		  축구
+		  <input type='checkbox' name='hobby' value='기타'>
+		  기타
+		</dd>
+	  </dl>
+	  <dl>
+	    <dt>생년월일</dt>
+		<dd>
+		  <input type='date' name='birthDt'>
+		</dd>
+	  </dl>
+	  <dl>
+	    <dt>자기소개</dt>
+		<dd>
+		  <textarea name='intro' rows='5' cols='100'></textarea>
+		</dd>
+	  </dl>
+	  <input type='reset' value='정보 초기화'>
+	  <input type='submit' value='가입하기'>
+	 </form>
+  
+  </body>
+  
+</html>
